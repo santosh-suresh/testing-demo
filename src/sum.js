@@ -6,12 +6,11 @@ function sum(a, b) {
 }
 
 function sumList(input = []) {
-    let sum = 0;
-    for (var i = 0; i < input.length; i++) {
-        if (input[i] > 0) {
-            sum += input[i]
-        }
-    }
-    return sum;
+    return input.reduce((acc, num) => {
+        if (num < 0) return acc
+        return acc + num;
+    }, 0)
+
+    // refactor this    
 }
 
