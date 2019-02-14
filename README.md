@@ -1,0 +1,1 @@
+This is a sample repository which is based on a talk that I gave on unit testing to my developers. The repo makes use of jest for unit testing.
