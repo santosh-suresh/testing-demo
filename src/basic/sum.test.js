@@ -6,7 +6,7 @@ test('adding 1 and 2 should return 3', () => {
 })
 
 test('adding negative number as second arg returns first arg', () => {
-    expect(sum(3, -4)).toBe(3)
+    expect(sum(3, -5)).toBe(3)
 })
 
 test('adding a list of numbers', () => {

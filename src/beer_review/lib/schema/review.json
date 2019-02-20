@@ -1,0 +1,41 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "http://example.com/review.schema.json",
+    "title": "Review",
+    "description": "Description of a Review for a beer :)",
+    "type": "object",
+    "required": [
+        "firstName",
+        "lastName",
+        "beerId",
+        "comments",
+        "created"
+    ],
+    "properties": {
+        "id": {
+            "description": "Unique identifier for the beer",
+            "type": "number"
+        },
+        "firstName": {
+            "description": "First Name of the reviewer",
+            "type": "string"
+        },
+        "lastName": {
+            "description": "Last Name of the reviewer",
+            "type": "string"
+        },
+        "beerId": {
+            "description": "Id of the beer being reviewed",
+            "type": "string"
+        },
+        "comments": {
+            "description": "A short comment for the review of the beer",
+            "type": "string"
+        },
+        "created": {
+            "description": "When was the entry created",
+            "format": "date-time"
+        }
+    },
+    "additionalProperties": false
+}

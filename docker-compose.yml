@@ -1,0 +1,21 @@
+version: '2'
+services:
+  web:
+    build: .    
+    volumes:
+      - .:/usr/src/app/
+      - /usr/src/app/node_modules
+    depends_on:
+      - postgres
+    environment:
+      DATABASE_URL: postgres://demoapp@postgres/demoapp
+  postgres:
+    image: postgres:alpine
+    ports:
+      - "5432:5432"      
+    environment:
+      POSTGRES_USER: demoapp
+      POSTGRES_DB: demoapp
+      POSTGRES_PASSWORD: demoapp
+    volumes:
+      - ./data/db:/var/lib/postgresql

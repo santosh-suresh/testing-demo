@@ -1,0 +1,42 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "http://example.com/beer.schema.json",
+    "title": "Beer",
+    "description": "Description of a beer :)",
+    "type": "object",
+    "required": [
+        "name",
+        "brewery",
+        "abv",
+        "shortDescription",
+        "created"
+    ],
+    "properties": {
+        "id": {
+            "description": "Unique identifier for the beer",
+            "type": "string"
+        },
+        "name": {
+            "description": "Name of the beer",
+            "type": "string"
+        },
+        "brewery": {
+            "description": "Company where the beer is brewed",
+            "type": "string"
+        },
+        "abv": {
+            "description": "Alcohol by volume",
+            "type": "number",
+            "exclusiveMinimum": 0
+        },
+        "shortDescription": {
+            "description": "A short description of the beer",
+            "type": "string"
+        },
+        "created": {
+            "description": "When was the entry created",
+            "format": "date-time"
+        }
+    },
+    "additionalProperties": false
+}
